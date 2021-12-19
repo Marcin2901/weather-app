@@ -65,7 +65,23 @@ class WeatherApp {
                                        
     } 
 
-   
+    displayWeatherData = (dataAboutWeather) => {
+        this.fadeInOut();
+        setTimeout(() => {
+            this.switchView();
+            this.fadeInOut();
+        }, 500);
+        
+
+        this.viewElem.ForecastCityName.innerText = dataAboutWeather.name;
+        this.viewElem.ForecastDesc.innerText = dataAboutWeather.weather[0].description;
+
+        this.viewElem.ForecastTemp.innerText =`Temp:  ${dataAboutWeather.main.temp}°C`;
+        this.viewElgitem.ForecastMinTemp.innerText = `Min Temp:  ${dataAboutWeather.main.temp_min}°C`;
+        this.viewElem.ForecastMaxTemp.innerText = `Max Temp:  ${dataAboutWeather.main.temp_max}°C`;
+        this.viewElem.forecastImg.src = `https://openweathermap.org/img/wn/${dataAboutWeather.weather[0].icon}@2x.png`;
+    }
+
 
 }
 
