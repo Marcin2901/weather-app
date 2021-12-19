@@ -9,18 +9,30 @@
 </head>
 <body>
     
-    <div class="container">
-        <section class="weather">
-            <form action="#" class="weather__form">
-                <div class="weather__form--input-field">
-                    <label class="weather__form--input-field__label">City Name:</label>
-                    <input type="text" class="weather__form--input-field__city-input" id="cityName">
+    <div class="container" id="weatherContainer">
+        <section class="weather__container" id="weatherSearchView">
+                <div class="weather__container--input-field">
+                    <label class="weather__container--input-field--label">City Name:</label>
+                    <input type="text" class="weather__container--input-field--city-input" id="searchCityInput">
                 </div>
-                <button type="submit" class="weather__form--btn" id="searchWeatcherBtn">Search</button>
-            </form>
+                <button type="submit" class="weather__container--btn" id="searchWeatcherBtn">Search</button>
         </section>
 
+        <section class="weather-forecast__container" id="weatherForecastView">
+            <div>
+                <h5 class="weather-forecast__container--title" id="ForecastCityName"></h5>
+                <p class="weather-forecast__container--para" id="ForecastDesc"></p>
+                <p class="weather-forecast__container--para" id="ForecastTemp"></p>
+                <p class="weather-forecast__container--para-m" id="ForecastMinTemp"></p>
+                <p class="weather-forecast__container--para-m" id="ForecastMaxTemp"></p>
+                <button id="returnToSearchBtn">return</button>
+            </div>
+            <div>
+                <img id="forecastImg">
+            </div>
+        </section>
     </div>
+
 
     <script type="module" src="src/index.js"></script>
 </body>
